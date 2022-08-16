@@ -1,0 +1,15 @@
+.app{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  // align-items: center;
+  .card{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100px;
+    min-width: 200px;
+    border: 1px solid #ccc;
+  }
+}
