@@ -7,7 +7,8 @@ function Card(props) {
   const { content, onClick, id } = props;
   return (
     <div className="card" id={id} onMouseDown={onClick}>
-      {content}
+      {/* {content} */}
+      <img src={content} alt="pokemon" />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 function Scoreboard(props) {
@@ -5,16 +6,12 @@ function Scoreboard(props) {
   return (
     <div className="scoreboard">
       <div className="score">
-        <p>
-          Score:
-          {score}
-        </p>
+        Score:
+        {score}
       </div>
       <div className="highscore">
-        <p>
-          Highscore:
-          {highScore}
-        </p>
+        Highscore:
+        {highScore}
       </div>
     </div>
   );

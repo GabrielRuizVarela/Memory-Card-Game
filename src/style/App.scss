@@ -1,4 +1,18 @@
 .app{
+  background: url("../images/background.jpg") repeat;
+  background-size: 100px;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  #header{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+}
+.cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
@@ -9,7 +23,46 @@
     justify-content: center;
     align-content: center;
     min-height: 100px;
-    min-width: 200px;
-    border: 1px solid #ccc;
+    aspect-ratio: 660/920;
+    // border: 1px solid #ccc;
+    img{
+      border-radius: 5%;
+      width: 100%;
+      height: 100%;
+    }
   }
+}
+
+.scoreboard{
+  justify-self: end;
+  background-color: #fe9cb5;
+  padding: 1.5rem 2rem;
+  box-shadow: 0px 0px 10px rgb(138, 138, 138);
+}
+
+#help{
+  width: fit-content;
+  position: relative;
+  font-size: 2rem;
+}
+
+#help::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  // display: inline-block;
+  top: 0;
+  min-width: 40ch;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  display: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  // transition: opacity 0.1s ease-out;
+  z-index: 99;
+  text-align: left;
+}
+
+#help:hover::after {
+  display: inline-block;
 }
